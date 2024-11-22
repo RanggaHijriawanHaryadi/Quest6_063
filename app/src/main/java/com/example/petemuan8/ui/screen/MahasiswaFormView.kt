@@ -171,7 +171,7 @@ fun MahasiswaFormView(
                     label = { Text(text = "Email Mahasiswa") },
                     leadingIcon = {
                         Icon(
-                            imageVector = Icons.Filled.Person,
+                            imageVector = Icons.Filled.Email,
                             contentDescription = ""
                         )
                     },
