@@ -141,13 +141,13 @@ fun RencanaStudyView(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly)
                 {
-                    RuangKelas.listKelas.forEach { listData ->
+                    RuangKelas.listKelas.forEach { data ->
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             RadioButton(
-                                selected = pilihanKelas == listData,
-                                onClick = {pilihanKelas = listData}
+                                selected = pilihanKelas == data,
+                                onClick = {pilihanKelas = data}
                             )
-                            Text(listData)
+                            Text(data)
                         }
                     }
                 }
