@@ -1,4 +1,4 @@
-package com.example.petemuan8.ui.view
+package com.example.petemuan8.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.petemuan8.model.Mahasiswa

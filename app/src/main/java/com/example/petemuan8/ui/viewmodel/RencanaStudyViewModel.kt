@@ -1,4 +1,4 @@
-package com.example.petemuan8.ui.view
+package com.example.petemuan8.ui.viewmodel
 
 import com.example.petemuan8.model.RencanaStudy
 import kotlinx.coroutines.flow.MutableStateFlow
