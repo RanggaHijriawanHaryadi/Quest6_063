@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.RadioButton
@@ -28,6 +29,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.motionEventSpy
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -148,6 +150,22 @@ fun RencanaStudyView(
                         }
                     }
                 }
+                Spacer(modifier = Modifier.padding(8.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.padding(8.dp))
+                Text(text = "Klasusal Persetujuan Mahasiswa", fontWeight = FontWeight.Bold)
+                Row (verticalAlignment = Alignment.CenterVertically){
+                    Checkbox(
+                      checked = checked,
+                        onCheckedChange = {checked = it },
+                        enabled = chosenDropdown.isNotBlank() && pilihanKelas.isNotBlank()
+                    )
+                    Text(
+                        text = "Saya menyetuji setiap pernyataan yang ada tanpa ada paksaan dari pihak manapun.",
+                        fontWeight = FontWeight.Light, fontSize = 10.sp
+                    )
+                }
+                Spacer(modifier = Modifier.padding(8.dp))
             }
         }
 
